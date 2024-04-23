@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <link href="font-awesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="side-container">
+                <div class="row-container flex-none">
+                    <span class="h3">
+                        Your move
+                    </span>
+                    <span class="result-count">You won <span id="result-win-count"> 0 </span> times </span>
+                </div>
+                <div class="row-container">
+                    <div class="circle-container">
+                        <div class="circle rock-icon" data-type="rock" onclick="onChoiceClicked(this)">
+                            <i class="icon fas fa-hand-rock fa-4x"></i>
+                        </div>
+                        <span>Rock</span>
+                    </div>
+                </div>
+                <div class="row-container">
+                    <div class="circle-container">
+                        <div class="circle margin-l-min-60 paper-icon" data-type="paper" onclick="onChoiceClicked(this)">
+                            <i class="icon fas fa-hand-paper fa-4x"></i>
+                        </div>
+                        <span class="margin-l-min-60">Paper</span>
+                    </div>  
+                    <div class="circle-container">
+                        <button class="check-button" disabled="true" role="button" onclick="onCheckClicked()">Fight</button>
+                    </div>
+                    <div class="circle-container">
+                        <div class="circle margin-l-60 scissors-icon" data-type="scissors" onclick="onChoiceClicked(this)">
+                            <i class="icon fas fa-hand-scissors fa-4x"></i>
+                        </div>
+                        <span class="margin-l-60">Scissors</span>
+                    </div>
+                </div>
+                <div class="row-container">
+                    <div class="circle-container">
+                        <div class="circle margin-l-60 lizard-icon" data-type="lizard" onclick="onChoiceClicked(this)">
+                            <i class="icon fas fa-hand-lizard fa-4x"></i>
+                        </div>
+                        <span class="margin-l-60">Lizard</span>
+                    </div>                        
+                    <div class="circle-container">
+                        <div class="circle margin-l-min-60 spock-icon" data-type="spock" onclick="onChoiceClicked(this)">
+                            <i class="icon fas fa-hand-spock fa-4x"></i>
+                        </div>
+                        <span class="margin-l-min-60">Spock</span>
+                    </div>
+                </div>
+            </div>
+            <div class="separator">
+                <span>V.S.</span>
+            </div>
+            <div class="side-container">
+                <div class="row-container flex-none">
+                    <span class="h3">
+                        Computer move
+                    </span>
+                    <span class="result-count">Computer won <span id="result-lose-count"> 0 </span> times</span>
+                </div>
+                <div class="row-container">
+                    <div class="circle-container">
+                        <div class="circle unknown-icon inactive" data-type="unknown">
+                            <i class="icon fas fa-question fa-4x"></i>
+                        </div>
+                        <span id="computer-choice"></span>
+                    </div>
+                </div>
+                <div class="row-container">
+                    <div class="circle-container" id="result">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body=>
+</html>

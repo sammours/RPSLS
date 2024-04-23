@@ -1,0 +1,204 @@
+body {
+    background-color: #2D2D2D;
+    height: 100%;
+}
+
+.container {
+    width: 95%;
+    font-family: verdana;
+    margin: 25px auto;
+    height: 800px;
+    overflow: hidden;
+    display: flex;
+}
+
+.h3 {
+    color: white;
+    font-size: 20pt;
+    flex: 3;
+}
+
+.result-count {
+    font-size: 16pt;
+    color: #fb8332;
+}
+
+.separator {
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* The vertical line is added with the ::after pseudo element - it sits under the disc, and is absolutely positioned to the top/bottom and center */
+  .separator::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    left: 50%;
+    border-right: 1px solid #CCC;
+    z-index: 1;
+  }
+  
+  /* This is the 'or' disc itself. Positioned relative and given a higher z-index so it sits on top of the line. */
+  .separator span {       
+    padding: 1rem;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 50%;
+    border: 1px solid #CCC;
+    background: #FFF;
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+
+.side-container {
+    width: 50%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.row-container {
+    flex: 1;
+    display: flex;
+    justify-items: center;
+}
+
+.circle-container {
+    flex: 1;
+    text-align: -webkit-center;
+}
+
+.circle-container span {
+    color: white;
+    font-size: 16pt;
+}
+
+.circle {
+    background: lightblue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    color: #595859;
+    border: 5px solid #595859;
+}
+
+
+.circle:hover, .circle.active {
+    background: lightgreen;
+    cursor: pointer;
+}
+
+.circle.inactive {
+    background: lightgrey;
+}
+
+.circle.unknown-icon { cursor: default; }
+
+.icon { margin-top: 15px;}
+
+/* CSS */
+.check-button {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fa6400;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    margin-top: 85px;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+.check-button:hover,
+.check-button:focus {
+    background-color: #fb8332;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.check-button:hover {
+    transform: translateY(-1px);
+}
+
+.check-button:active {
+    background-color: #c85000;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+}
+
+.check-button[disabled]{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+    cursor: default;
+}
+
+.result-icon.fa-thumbs-up {
+    color: lightgreen;
+    animation: pulse 2.5s infinite;
+}
+
+.result-icon.fa-thumbs-down {
+    color: lightsalmon;
+    animation: pulse 2.5s infinite;
+}
+
+.result-icon.fa-question {
+    color: lightgrey;
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.result-text {
+    color: white;
+    margin-top: 30px;
+}
+
+.margin-l-60 {
+    margin-left: 60px;
+}
+
+.margin-l-min-60 {
+    margin-left: -60px;
+}
+
+.flex-none {
+    flex: none;
+}
